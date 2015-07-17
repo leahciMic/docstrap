@@ -65,7 +65,8 @@ $.fn.toc = function(options) {
       var a = $('<a/>')
         .text(opts.headerText(i, heading, $h))
         .attr('href', '#' + opts.anchorName(i, heading, opts.prefix))
-        .bind('click', function(e) { 
+        .bind('click', function(e) {
+          console.log(e);
           scrollTo(e);
           el.trigger('selected', $(this).attr('href'));
         });
